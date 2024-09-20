@@ -1,0 +1,44 @@
+.container,
+.banner {
+    position: relative;
+}
+
+.banner {
+    height: 420px;
+    background: url(/public/banner.webp);
+    background-repeat: no-repeat;
+    background-size: 220%;
+    background-position: bottom -500px left -20px;
+}
+
+.banner::before {
+    content: '';
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur( 5.5px );
+}
+
+.banner,
+.banner::before {
+    width: 100%;
+}
+
+.banner::before,
+.title {
+    position: absolute;
+}
+
+.containerTitle {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+.title {
+    z-index: 10;
+    margin-top: 90px;
+    padding: 10px;
+    color: #fff;
+    max-width: 390px;
+    font-family: var(--font-secondary);
+    font-size: 64px;
+}
