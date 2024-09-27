@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import styles from './ArticleItem.module.css';
 
 export const ArticleItem = ({ title, description, date, author, image, isBlog }) => {
-    console.log('isBlog:', isBlog);
     return (
         <li className={isBlog ? `${styles.blogLayout}` : `${styles.newsLayout}`}> 
         <div className={isBlog ? `${styles.imageBlog}` : `${styles.imageNews}`}>
@@ -27,10 +26,10 @@ export const ArticleItem = ({ title, description, date, author, image, isBlog })
 }
 
 ArticleItem.propTypes = {
-    title: PropTypes.string,
-    description: PropTypes.string,
-    date: PropTypes.string,
-    author: PropTypes.string,
-    image: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
     isBlog: PropTypes.bool.isRequired,
 }
